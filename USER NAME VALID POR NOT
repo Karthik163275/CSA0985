@@ -1,0 +1,22 @@
+public class ValidateUsernameExample {
+ 
+    public static void main(String args[]){
+        
+        String strPattern = "^[a-zA-Z0-9_.]{8,20}$";
+        
+        String[] strUserNames = {
+                    "Smith19", 
+                    "Jason_max", 
+                    "bond", "JamesBond@007",
+                    "_michael_clarke"
+                };
+        for(String strUserName : strUserNames){
+            if(strUserName.matches(strPattern)){
+                System.out.println(strUserName + " is valid");
+            }else{
+                System.out.println(strUserName + " is not valid");
+            }
+        }
+        
+    }
+}
